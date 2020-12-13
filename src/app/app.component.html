@@ -1,20 +1,3 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-sm-12 col-offset-md-2">
-      <section id="property-binding">
-        <h5>Property Binding</h5>
-        <p>Binding <em>disabled</em> property to <em>isDisabled</em> property of AppComponent </p>
-        <button class="btn btn-info" [disabled]="isDisabled">Property Binding</button>
-        <br>
-        <br>
-        <p>Binding <em>propBinding</em> property of CompChildComponent to <em>isChildDisabled</em> of AppComponent</p>
-        <app-comp-child [propBinding]="isChildDisabled"></app-comp-child>
-        <br>
-        <br>
-        <h5>Interpolation</h5>
-        This is data from App Component: {{interpolationString}}
-      </section>
-
-    </div>
-  </div>
-</div>
+<app-header></app-header>
+<!-- <app-property-binding></app-property-binding> -->
+<router-outlet></router-outlet>

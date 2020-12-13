@@ -6,13 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isDisabled=false;
-  isChildDisabled=false;
-  interpolationString = "Test data";
+  
   title = 'angular-data-binding';
   
-
-  clickBtn(){
-    this.isDisabled = true;
-  }
 }
