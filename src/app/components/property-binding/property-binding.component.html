@@ -12,15 +12,63 @@
         </button>
         <br />
         <br />
+        <h5>Child Property Binding</h5>
         <p>
           Binding <em>propBinding</em> property of CompChildComponent to
           <em>isChildDisabled</em> of AppComponent
         </p>
-        <app-child-property-binding [propBinding]="isChildDisabled"></app-child-property-binding>
+        <app-child-property-binding
+          [propBinding]="isChildDisabled"
+        ></app-child-property-binding>
         <br />
         <br />
         <h5>Interpolation</h5>
-        This is data from App Component: {{ interpolationString }}
+        <p>This is data from App Component: {{ interpolationString }}</p>
+        <h5>Setting value of attribute directives</h5>
+        <p [ngClass]="custom_classes">
+          Setting classes to the directive from property of a component.
+        </p>
+        <h5>Binding to Class Attribute</h5>
+        <p [class.custom1]="isCustom1">
+          Binding class attribute to a component variable
+        </p>
+        <h5>Binding to Style Attribute</h5>
+        <p [style.color]="color_comp">
+          Binding style attribute to a component variable
+        </p>
+      </section>
+      <section id="event-binding">
+        <h5>Event Binding</h5>
+        <p>
+          The below button is disabled based on <em>isEventBtnDisabled</em>. On
+          clicking this button, <em>evnt_binding</em> method is called and
+          <em>isEventBtnDisabled</em> is set to true, which in turn disables the
+          button.
+        </p>
+        <button
+          class="btn btn-info"
+          [disabled]="isEventBtnDisabled"
+          (click)="evnt_binding()"
+        >
+          Click here
+        </button>
+
+        <h5>Event Binding with child parent components</h5>
+        <p>
+          The child event binding component is inserted below. In the child
+          component, on clicking <em>Child Event Binding</em> buttn,
+          <em>eventBindingRequest</em> event is emitted which in turn triggers
+          <em>eventBindingParent()</em> method of parent component where
+          <em>isEventBindingParent</em> variable is toggled and based on that
+          <em>Event Binding Parent</em> button is disablement is toggled.
+        </p>
+        <app-child-event-binding
+          (eventBindingRequest)="eventBindingParent($event)"
+        ></app-child-event-binding>
+        <br />
+        <button class="btn btn-primary" [disabled]="isEventBindingParent">
+          Parent Event Binding
+        </button>
       </section>
     </div>
   </div>
