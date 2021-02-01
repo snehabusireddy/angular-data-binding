@@ -14,3 +14,7 @@ Create a new Angular project using `ng new <project-name>` which creates a proje
 ## Generate a component
 
 Generate a new component using angular-cli command `ng g c <component_name>` which creates a new component and declares it in app.module.ts.
+
+## Generate a pipe boilerplate
+
+Generate a new pipe using angular-cli command `ng g pipe <pipe_name>` which create boilerplat code for custom pipe and declares it in app.module.ts.

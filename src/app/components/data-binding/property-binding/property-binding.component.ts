@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TestEventBinding } from '../../model/test-event-binding';
+import { TestEventBinding } from '../../../model/test-event-binding';
 
 @Component({
   selector: 'app-property-binding',

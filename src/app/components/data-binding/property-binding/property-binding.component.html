@@ -1,8 +1,9 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-sm-12 col-offset-md-2">
+<div class="container-fluid">
+  <div class="row custom_page">
+    <div class="col-md-6 col-sm-12">
       <section id="property-binding">
         <h5>Property Binding</h5>
+        <hr />
         <p>
           Binding <em>disabled</em> property to <em>isDisabled</em> property of
           AppComponent
@@ -37,8 +38,11 @@
           Binding style attribute to a component variable
         </p>
       </section>
+    </div>
+    <div class="col-md-6 col-sm-12">
       <section id="event-binding">
         <h5>Event Binding</h5>
+        <hr />
         <p>
           The below button is disabled based on <em>isEventBtnDisabled</em>. On
           clicking this button, <em>evnt_binding</em> method is called and
@@ -60,7 +64,7 @@
           <em>eventBindingRequest</em> event is emitted which in turn triggers
           <em>eventBindingParent()</em> method of parent component where
           <em>isEventBindingParent</em> variable is toggled and based on that
-          <em>Event Binding Parent</em> button is disablement is toggled.
+          <em>Binding Parent Parent</em> button is disablement is toggled.
         </p>
         <app-child-event-binding
           (eventBindingRequest)="eventBindingParent($event)"

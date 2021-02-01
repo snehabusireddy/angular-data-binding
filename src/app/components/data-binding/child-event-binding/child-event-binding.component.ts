@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { TestEventBinding } from '../../model/test-event-binding';
+import { TestEventBinding } from '../../../model/test-event-binding';
 
 @Component({
   selector: 'app-child-event-binding',

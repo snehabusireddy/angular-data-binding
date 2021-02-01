@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row custom_page">
+    <div class="col-md-6 col-sm-12">
+      <h5>Standard Pipes</h5>
+      <hr />
+      <p><b>UpperCase Pipe: </b> {{ word | uppercase }}</p>
+      <p><b>LowerCase Pipe: </b> {{ word | lowercase }}</p>
+      <p><b>Date Pipe: </b> {{ test_date | date }}</p>
+      <p>
+        <b>Date Pipe with parameter 'long': </b> {{ test_date | date: "long" }}
+      </p>
+      <p>
+        <b>Date Pipe with parameter 'h:mm:ss a z': </b
+        >{{ test_date | date: "h:mm:ss a z" }}<br />There are many other options
+        that go with Date pipe to visualize date as required.
+      </p>
+      <p>
+        <b>CurrencyPipe: </b> {{ amount | currency }} <br />
+        By default, it takes USD.
+      </p>
+      <p><b>DecimalPipe: </b> {{ amount | number }}</p>
+      <p>
+        <b>DecimalPipe with parameter '5.1-2': </b>
+        {{ amount | number: "5.1-2" }}
+      </p>
+      <b>5.1-2 means: </b> 5 digits before decimal, 1 minimum and 2 maximum
+      after decimal
+      <p><b>PercentPipe: </b> {{ amount | percent }}</p>
+      <p>
+        <b>PercentPipe with paremeter '5.1-2': </b>
+        {{ amount | percent: "5.1-2" }}
+      </p>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+      <h5>Custom Pipes</h5>
+      <hr />
+      <p>
+        Create a custom pipe and modify the <em>transform</em> method to take
+        input value and parameter and build logic to transform the input data
+        and return the resulting value. Use <em>name</em> of
+        <em>Pipe</em> decorator in the template bindings. Typically uses
+        lowerCamelCase because the name cannot contain hyphens.
+      </p>
+      <p><b>CustomPipe with no input: </b> {{ customPipeInput | custom }}</p>
+      <p>
+        <b>CustomPipe with input '9': </b>{{ customPipeInput | custom: "9" }}
+      </p>
+    </div>
+  </div>
+</div>
